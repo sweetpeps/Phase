@@ -213,7 +213,7 @@ std::chrono::duration<double> time_span = std::chrono::duration_cast<std::chrono
   std::cout << std::endl;
             Execute(Bytecode);
         }
-        //CreateThread(0, 0, (LPTHREAD_START_ROUTINE)input, 0, 0, 0);
+        
     }
 }
 
@@ -244,7 +244,7 @@ void __fastcall DesHook(int a1, const char* a2, const char* a3, int a4, int a5) 
 
 
 int main() {
-   //t1 = std::chrono::high_resolution_clock::now();
+  
     DWORD nOldProtect;
     if (!VirtualProtect(FreeConsole, 1, PAGE_EXECUTE_READWRITE, &nOldProtect))
         return FALSE;
@@ -256,7 +256,7 @@ int main() {
     freopen("CONIN$", "r", stdin);
     HWND ConsoleHandle = GetConsoleWindow();
     SetWindowPos(ConsoleHandle, HWND_TOPMOST, 50, 20, 0, 0, SWP_DRAWFRAME | SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW);
- //   t1 = std::chrono::high_resolution_clock::now();
+
 
     bool DebugDes = false;
 
