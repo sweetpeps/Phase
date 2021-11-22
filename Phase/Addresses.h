@@ -1,6 +1,5 @@
 #include <Windows.h>
 #include <iostream>
-//56 8B F1 80 7E 07 00 75 LuaD_call
 
 uint64_t ASLR(uint64_t address);
 
